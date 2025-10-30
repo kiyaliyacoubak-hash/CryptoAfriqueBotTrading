@@ -5,11 +5,20 @@
 # Remplace TELEGRAM_TOKEN par ton token fourni par @BotFather.
 # ================================================================
 
-import ccxt, pandas as pd, numpy as np, telegram, time, os, math, traceback
-from datetime import datetime, timedelta, timezone
-from flask import Flask
-import threading
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+Une exception non gérée s'est produite lors du traitement d'une requête par un service, ce qui peut entraîner son plantage ou son redémarrage.
+Un service rencontre des problèmes de connexion à la base de données, tels queSSL connection has been closed unexpectedly :
+Dans ce cas, la mise en place sslmode=requireet/ou la configuration d'unpool de connexionspeut aider.
+Un service ou une base de données est surchargé, souvent par un trop grand nombre de connexions simultanées ou par des ressources limitées (telles que le processeur ou la RAM).
+Dans ce cas, les avertissements concernant les contraintes de ressources apparaissent généralement dans le service.journauxet sur la page Événements du service dans leAfficher le tableau de bord.
+Pour résoudre ce problème, considérezmise à l'échellevotre service pour contribuer à alléger la charge.
+502 Mauvaise passerelle
+Un service web a mal configuré sonhôte et port.
+Associez votre hôte à 0.0.0.0et définissez éventuellement la PORTvariable d'environnement pour utiliser un port personnalisé (le port par défaut est 10000).
+Un nouvel ajoutdomaine personnaliséne redirige pas encore vers son service web.
+Dans la plupart des cas, ce problème se résout en quelques minutes, mais cela peut prendre jusqu'à une heure.
+Un service web Node.js rencontre des délais d'attente ou Connection reset by peerdes erreurs intermittents. Essayez d'augmenter les valeurs de ` timeout` server.keepAliveTimeoutet ` server.headersTimeouttimeout` (par exemple, `timeout` à `timeout` 120000pour 120 secondes).
+Un service rencontre des problèmes WORKER, des avertissements SIGKILLou SIGTERMdes erreurs (par exemple, [CRITICAL] WORKER TIMEOUT).
+Envisagez d'augmenter vos valeurs de délai d'expiration et vos limites de travailleurs (par exemple, via legunicorn
 
 # ------------------------------
 # CONFIG (à personnaliser)
